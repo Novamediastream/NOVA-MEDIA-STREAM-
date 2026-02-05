@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MX IPTV - Toda la TV en tu App</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
-/* Reset y estilo base */
 * {margin:0; padding:0; box-sizing:border-box;}
 body {font-family: 'Roboto', sans-serif; background:#0a0a0a; color:#fff; line-height:1.6;}
 a {text-decoration:none; color: inherit;}
@@ -27,7 +27,7 @@ header img {height:50px;}
 nav a {margin-left:20px; font-weight:700; transition:0.2s;}
 nav a:hover {color:#00a7ad;}
 
-/* Hero / Banner */
+/* Hero */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.imgur.com/msjlLkN.jpeg') center/cover no-repeat;
   height: 70vh;
@@ -48,11 +48,30 @@ nav a:hover {color:#00a7ad;}
   font-size:18px;
   font-weight:700;
   color:#fff;
-  transition:0.3s;
 }
 .hero button:hover {background:#009195;}
 
-/* Sección de beneficios */
+/* Transmisión en vivo */
+.live {
+  padding:60px 10%;
+  text-align:center;
+}
+.live h2 {
+  color:#00a7ad;
+  margin-bottom:20px;
+}
+.live p {
+  margin-bottom:30px;
+  color:#ccc;
+}
+.live iframe {
+  width:100%;
+  max-width:900px;
+  height:500px;
+  border-radius:12px;
+}
+
+/* Features */
 .features {
   padding:60px 10%;
   display:grid;
@@ -64,25 +83,31 @@ nav a:hover {color:#00a7ad;}
   background:#151515;
   border-radius:12px;
   padding:30px 20px;
-  transition:0.3s;
 }
-.features div:hover {background:#1a1a1a;}
 .features h3 {margin-bottom:15px; color:#00a7ad;}
 .features p {color:#ccc;}
 
-/* Sección de tutoriales */
+/* Tutoriales */
 .tutorials {
   padding:60px 10%;
 }
-.tutorials h2 {text-align:center; margin-bottom:40px; color:#00a7ad;}
+.tutorials h2 {
+  text-align:center;
+  margin-bottom:40px;
+  color:#00a7ad;
+}
 .tutorials .videos {
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   gap:30px;
 }
-.tutorials iframe {width:100%; height:200px; border-radius:12px;}
+.tutorials iframe {
+  width:100%;
+  height:200px;
+  border-radius:12px;
+}
 
-/* Llamada a acción final */
+/* CTA */
 .cta {
   background:#00a7ad;
   padding:60px 10%;
@@ -90,7 +115,7 @@ nav a:hover {color:#00a7ad;}
   border-radius:12px;
   margin:40px 10%;
 }
-.cta h2 {margin-bottom:20px; font-size:32px; color:#fff;}
+.cta h2 {margin-bottom:20px; font-size:32px;}
 .cta p {margin-bottom:30px;}
 .cta .download-buttons {
   display:flex;
@@ -106,7 +131,6 @@ nav a:hover {color:#00a7ad;}
   font-weight:700;
   border-radius:8px;
   border:none;
-  transition:0.3s;
 }
 .cta button:hover {background:#222;}
 
@@ -121,74 +145,82 @@ footer {
 footer a {color:#00a7ad;}
 </style>
 </head>
+
 <body>
 
-<!-- Header -->
 <header>
   <img src="https://i.imgur.com/msjlLkN.jpeg" alt="MX IPTV Logo">
   <nav>
+    <a href="#live">En vivo</a>
     <a href="#tutoriales">Tutoriales</a>
     <a href="#descarga">Descargar App</a>
     <a href="#contacto">Contacto</a>
   </nav>
 </header>
 
-<!-- Hero / Banner -->
 <section class="hero">
   <h1>¡Toda la TV en una sola aplicación!</h1>
-  <p>Canales en vivo, contenidos exclusivos y mucho más. Todo en la palma de tu mano.</p>
-  <button onclick="window.location.href='#descarga'">Descarga nuestras apps ahora</button>
+  <p>Canales en vivo, contenidos exclusivos y mucho más.</p>
+  <button onclick="window.location.href='#descarga'">Descargar apps</button>
 </section>
 
-<!-- Beneficios / Características -->
+<!-- TRANSMISIÓN EN VIVO -->
+<section id="live" class="live">
+  <h2>🔴 Transmisión en vivo</h2>
+  <p>Estamos en vivo presentando todas las novedades de nuestras aplicaciones.</p>
+  <iframe 
+    src="https://www.youtube.com/embed/0nYqoTsfhYg" 
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</section>
+
 <section class="features">
   <div>
     <h3>Todo incluido</h3>
-    <p>No necesitas listas adicionales. Todo el contenido listo en tu app.</p>
+    <p>No necesitas listas adicionales.</p>
   </div>
   <div>
-    <h3>Compatible con Android y Smart TV</h3>
-    <p>Disfruta de tu contenido favorito en cualquier dispositivo.</p>
+    <h3>Android y Smart TV</h3>
+    <p>Compatible con múltiples dispositivos.</p>
   </div>
   <div>
     <h3>Reproducción estable</h3>
-    <p>Transmisiones sin interrupciones y sin anuncios invasivos.</p>
+    <p>Sin anuncios invasivos.</p>
   </div>
   <div>
     <h3>Actualizaciones constantes</h3>
-    <p>Mantente siempre al día con nuevas funciones y mejoras.</p>
+    <p>Siempre mejorando.</p>
   </div>
 </section>
 
-<!-- Tutoriales de YouTube -->
 <section id="tutoriales" class="tutorials">
   <h2>Aprende a usar MX IPTV</h2>
   <div class="videos">
-    <iframe src="https://www.youtube.com/embed/fUTryIoWUc4" title="Tutorial 1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/VVP7D62y8OU" title="Tutorial 2" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/6TwLj9Gbppc" title="Tutorial 3" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/eAaJ7loZMtM" title="Tutorial 4" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/ge24nJBR3EE" title="Tutorial 5" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/fUTryIoWUc4" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VVP7D62y8OU" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/6TwLj9Gbppc" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/eAaJ7loZMtM" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/ge24nJBR3EE" allowfullscreen></iframe>
   </div>
 </section>
 
-<!-- Llamada a la acción final -->
 <section id="descarga" class="cta">
   <h2>¡No esperes más!</h2>
-  <p>Descarga MX IPTV, GT IPTV y HN IPTV y empieza a disfrutar de toda la TV desde tu app.</p>
+  <p>Descarga nuestras aplicaciones ahora.</p>
   <div class="download-buttons">
-    <button onclick="window.open('https://www.mediafire.com/file/yuru75nwjrsths2/MX+IPTV.apk/file')">Descargar MX IPTV</button>
-    <button onclick="window.open('https://www.mediafire.com/file/lezeaa35e8pm2sn/GT+IPTV.apk/file')">Descargar GT IPTV</button>
-    <button onclick="window.open('https://www.mediafire.com/file/2lhekr6f40fd5fq/HN_IPTV_%2528BETA%2529.apk/file')">Descargar HN IPTV</button>
+    <button onclick="window.open('https://www.mediafire.com/file/yuru75nwjrsths2/MX+IPTV.apk/file')">MX IPTV</button>
+    <button onclick="window.open('https://www.mediafire.com/file/lezeaa35e8pm2sn/GT+IPTV.apk/file')">GT IPTV</button>
+    <button onclick="window.open('https://www.mediafire.com/file/2lhekr6f40fd5fq/HN_IPTV_%2528BETA%2529.apk/file')">HN IPTV</button>
   </div>
 </section>
 
-<!-- Footer -->
 <footer id="contacto">
   <p>Contacto: <a href="mailto:novamediastreamcostarica@gmail.com">novamediastreamcostarica@gmail.com</a></p>
   <p>Síguenos en <a href="https://t.me/mxiptvsoporte">Telegram</a> | <a href="https://chat.whatsapp.com/D2x9GhB9qsYFF1dtdKNaYF">WhatsApp</a></p>
-  <p>&copy; 2026 MX IPTV. Todos los derechos reservados.</p>
+  <p>&copy; 2026 MX IPTV</p>
 </footer>
 
 </body>
-      </html>
+</html>
